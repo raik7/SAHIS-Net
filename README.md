@@ -1,2 +1,2 @@
 # SAHIS-Net
-SAHIS-Net: aspectral attentionandfeatureenhancement networkformicroscopic  hyperspectralcholangiocarcinomaimagesegmentation
+SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation
