@@ -3,6 +3,7 @@
 SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation
 
 Citation:
+
 @article{zhang2024sahis,
   title={SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation},
   author={Zhang, Yunchu and Dong, Jianfei},
@@ -15,8 +16,11 @@ Citation:
 }
 
 Requirements:
+
 TensorFlow = 2.4.0
+
 numpy = 1.19.5
+
 tqdm = 4.58.0
 
 1. Run HMUNetGenerate.py to generate the preproceessed hyperspectral images. The pre-trained weights of HM-UNet are provided as HMUNet.h5.
