@@ -1,8 +1,8 @@
 # SAHIS-Net
 
-SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation
+## SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation
 
-Citation:  
+## Citation:  
 @article{zhang2024sahis,  
   title={SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation},  
   author={Zhang, Yunchu and Dong, Jianfei},  
@@ -12,9 +12,9 @@ Citation:
   pages={3147--3162},  
   year={2024},  
   publisher={Optica Publishing Group}  
-}
+}  
 
-Requirements:  
+## Requirements:  
 TensorFlow = 2.4.0  
 numpy = 1.19.5  
 tqdm = 4.58.0  
