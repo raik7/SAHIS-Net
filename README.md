@@ -2,6 +2,7 @@
 
 SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation
 
+Citation:
 @article{zhang2024sahis,
   title={SAHIS-Net: a spectral attention and feature enhancement network for microscopic hyperspectral cholangiocarcinoma image segmentation},
   author={Zhang, Yunchu and Dong, Jianfei},
