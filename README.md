@@ -14,10 +14,10 @@ Citation:
   publisher={Optica Publishing Group}
 }
 
-Requirements:
-TensorFlow = 2.4.0
-numpy = 1.19.5
-tqdm = 4.58.0
+Requirements:  
+TensorFlow = 2.4.0  
+numpy = 1.19.5  
+tqdm = 4.58.0  
 
 1. Run HMUNetGenerate.py to generate the preproceessed hyperspectral images. The pre-trained weights of HM-UNet are provided as HMUNet.h5.
 2. Run HMUNetTrain.py to train the HM-UNet.
