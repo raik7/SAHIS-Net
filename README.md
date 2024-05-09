@@ -15,8 +15,10 @@
 }  
 
 ## Requirements:  
-TensorFlow = 2.4.0  
 numpy = 1.19.5  
+opencv-python = 4.8.1.78  
+scikit-learn = 0.22.2  
+TensorFlow = 2.4.0  
 tqdm = 4.58.0  
 
 1. Run HMUNetGenerate.py to generate the preproceessed hyperspectral images. The pre-trained weights of HM-UNet are provided as HMUNet.h5.
