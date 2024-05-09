@@ -14,10 +14,9 @@ gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
 tf.config.experimental.set_visible_devices(devices=gpus[0:1], device_type='GPU')
 tf.config.experimental.set_memory_growth(gpus[0], True)
 
-img_path = 'E:\\ProjectFiles\\Data\\Cholangiocarcinoma\\hyper\\hdrSplitNorm'
-# '...\\Cholangiocarcinoma\\PreProcessed\\'
-msk_path = 'E:\\ProjectFiles\\Data\\Cholangiocarcinoma\\annotation\\selected\\selectedUnfilledHoles'
-model_results_dir = 'E:\\ProjectFiles\\models\\Cholangiocarcinoma\\allBands\\selectedUnfilledHoles\\hdrSplitNorm\\test'
+img_path = '...\\Cholangiocarcinoma\\PreProcessed\\'
+msk_path = '...\\Cholangiocarcinoma\\annotation\\'
+model_results_dir = '...\\Cholangiocarcinoma\\models'
 if not os.path.exists(model_results_dir):
     os.makedirs(model_results_dir)
 
@@ -33,36 +32,34 @@ msk_files.sort()
 X = []
 Y = []
 
-# for j in trange(len(msk_files)):
-#     if j % 1 == 0:
-#         img_fl = msk_files[j]
-#         img_name = img_fl.split('.')[0]
+for j in trange(len(msk_files)):
+    if j % 1 == 0:
+        img_fl = msk_files[j]
+        img_name = img_fl.split('.')[0]
 
-#         image = cv2.imread(img_path + '\\{}\\0.png'.format(img_name), cv2.IMREAD_GRAYSCALE)
-#         image = cv2.resize(image, img_resize)
+        image = cv2.imread(img_path + '\\{}\\0.png'.format(img_name), cv2.IMREAD_GRAYSCALE)
+        image = cv2.resize(image, img_resize)
 
-#         # cv2.imshow('img',image)
-#         # cv2.waitKey(0)
+        # cv2.imshow('img',image)
+        # cv2.waitKey(0)
 
-#         for i in range(1,60):
-#             hdr_Slice = cv2.imread(img_path + '\\{}\\{}.png'.format(img_name,i), cv2.IMREAD_GRAYSCALE)
-#             hdr_Slice = cv2.resize(hdr_Slice, img_resize)
-#             # cv2.imshow('img',hdr_Slice)
-#             # cv2.waitKey(0)
-#             image = np.dstack((image, hdr_Slice))
+        for i in range(1,60):
+            hdr_Slice = cv2.imread(img_path + '\\{}\\{}.png'.format(img_name,i), cv2.IMREAD_GRAYSCALE)
+            hdr_Slice = cv2.resize(hdr_Slice, img_resize)
+            # cv2.imshow('img',hdr_Slice)
+            # cv2.waitKey(0)
+            image = np.dstack((image, hdr_Slice))
         
-#         X.append(image)
+        X.append(image)
 
-#         mask = cv2.imread(msk_path + '\\' + img_fl, cv2.IMREAD_GRAYSCALE)
-#         mask = cv2.resize(mask, img_resize)
-#         # mask = cv2.flip(mask,0)
-#         # cv2.imshow('img',mask)
-#         # cv2.waitKey(0)
+        mask = cv2.imread(msk_path + '\\' + img_fl, cv2.IMREAD_GRAYSCALE)
+        mask = cv2.resize(mask, img_resize)
+        # mask = cv2.flip(mask,0)
+        # cv2.imshow('img',mask)
+        # cv2.waitKey(0)
 
-#         Y.append(mask)
-
-X = np.load('E:\\ProjectFiles\\Data\\Cholangiocarcinoma\\hyper\\hdrSplitNorm\\hdrSplitNormSUH60.npy')
-Y = np.load('E:\\ProjectFiles\\Data\\Cholangiocarcinoma\\annotation\\selected\\selectedUnfilledHoles\\selectedUnfilledHoles.npy')
+        Y.append(mask)
+        
 Y = Y.reshape((Y.shape[0],Y.shape[1],Y.shape[2],1))
 
 np.random.seed(1000)
