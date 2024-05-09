@@ -215,10 +215,3 @@ def SAHISNet(pretrained_weights = None,input_size = (256,256,1)):
     	model.load_weights(pretrained_weights)
 
     return model
-
-
-
-# model = SAHISNet(pretrained_weights = None,input_size = (192,256,60))
-# for layer in model.layers:
-#         print(layer.name)
-# model.summary()
